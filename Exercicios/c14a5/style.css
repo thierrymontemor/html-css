@@ -1,0 +1,16 @@
+/*Para usar shorthand nas fontes, seguimos a seguinte ordem: style weight size family*/
+/*Para usar fontes que não estão nas CSS, podemos utilizar o Googl Fonts e importar a fonta desejada*/
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;1,400;1,800&display=swap');
+
+body{background-color:rgba(191, 151, 31, 0.623);}
+h1{
+    font: normal lighter 3em 'Impact', serif;
+
+}
+h2{
+    font: italic bold 2em 'Times New Roman';
+
+}
+h3{font: NORMAL normal 3em 'Alegreya', serif;}
+/*Caso queira usar um fonte externo, devemos baixá-la, e usar a regra @font-face, e configurar os dados da fonte*/

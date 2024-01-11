@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+       span{
+            font-weight: 300;
+            font-size: 1em ;
+        }
+        h1{ /*As 3 primeiras propriedades demarcam o espaço de conteúdo. Caso eu não alterasse nada, o próprio navegador definirá o 'margin', por exemplo.*/
+            background-color: aquamarine;
+            height: 50px;
+            width: 500px; 
+            /*A partir daqui, colocaremos as medidas desejas nas seguintes propriedades: padding, border, margin e outline.*/
+
+            padding-top:50px;
+            padding-right:50px;
+            padding-bottom:50px;
+            padding-left: 50px;
+
+            border-width: 20px;
+            border-style: groove;
+            border-color: brown;
+
+            margin: 20px 40px 30px 50px; /*usei uma shorthand. A propriedade tem os mesmos parâmetros que o padding. 
+            Eu também poderia ter usado o margin:auto; para que a caixa ficasse horizontalmente centralizada. */
+
+            outline: 10px dotted orange; /* esse outline usa os mesmos parâmetros que o border, e desconta do tamanho do margin */
+        }
+        a{
+            border: 5px solid red;
+            padding: 1px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <span>
+        Existem basicamente 2 tipos de caixas: <strong>block-level</strong> e <strong>inline-level</strong>. <br><hr>
+        O tipo block-level é aquele que ocupa toda a linha, independente se o conteúdo não necessita de todo o espaço ocupado. <br>
+        O tipo inline-level é aquele que ocupa precisamente o espaço ocupado pelo conteúdo, podendo haver várias caixas inline-level numa mesma linha. <br><hr>
+        Vale lembrar, também, que, com o uso da propriedade "display", é possível converter uma caixa block-level em inline-level, e vice-versa. <br><hr>
+        Vamos usar a tag 'h1' para exemplificar o block level, e 'a' para exemplicar o inline level.
+    </span>
+    <br>
+    <h1>Este é um exemplo de block-level</h1>
+    <h2>Este é o exemplo do <a href="#">inline-level</a> com 2 links ao longo desta mesma <a href="#">linha</a>.</h2>
+</body>
+</html>

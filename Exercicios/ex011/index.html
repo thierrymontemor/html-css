@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias</title>
+</head>
+<body>
+    <h1>Imagens dinâmicas</h1>
+    <p>Passo a passo:</p>
+    <ol type="I">
+        <li>Ter uma mesma imagem em diferentes tamanhos</li>
+        <li>Adicionar imagem em todos os tamanhos desejados usando as PICTURE e SOURCE</li>
+        <li>Definir a o intervalo do tamanho de tela para cada tamanho de imagem</li>
+    </ol>
+    <p>Na prática:</p>
+    <picture>
+        <source media="(max-width: 725px)" srcset="imagens/img-pequena.png" type="image/png">
+        <source media="(max-width: 1025px)" srcset="imagens/img-media.png" type="image/png">
+        <img src="imagens/img-grande.png" alt="imagem dinâmica">
+    </picture>
+    <hr>
+    <h1>Áudios</h1>
+    <p>Passo a passo:</p>
+    <ol type="I">
+        <li>Ter um mesmo áudio em formatos diferentes para estar acessível ao maior número de navegadores possíveis.</li>
+        <li>Adicionar os audios pelas tags AUDIO e SOURCE</li>
+        <li>Colocar o formato prefirido em prioridade de cima para baixo.</li>
+    </ol>
+    <p>Na prática:</p>
+    <audio preload="metadata" controls autoplay>
+        <source src="audios/Presente da Heloísa.MP3" type="audio/mpeg">
+        <source src="audios/Presente da Heloísa.ogg" type="audio/ogg">
+        <p>Seu navegador não suporta o aúdio. Clique <a href="audios/Presente da Heloísa.MP3" download="Presente da Heloísa.mp3" type="audio/mpeg">aqui</a> para fazer o download do áudio.</p>
+    </audio>
+    <hr>
+    <h1>Vídeos em servidor próprio</h1>
+    <p>Neste caso, assim como nos áudios, você deve publicar o vídeo desejado em vários formatos a fim de aumentar a compatibilidade com os navedores dos usuários. Alguns dos formatos mais aceitos são mp4, m4v, ogv, webm.</p>
+    <video width="500px" controls poster="videos/thumb/thumb-ceu-estrelado.jpg">
+        <source src="videos/ceu-estrelado.mov" type="video/mp4">
+        <source src="videos/ceu-estrelado.mp4" type="video/mp4">
+        <p>Vídeo não suportado pelo seu navegador.</p>
+    </video>
+    <h1>Vídeos externos</h1>
+    <p>Neste caso, você acessa o conteúdo em outro plataforma (o Youtube será o exemplo da vez) e busca a parte de 'incorporar'. Dessa forma, o código vem pronto e você pode fazer suas alterações.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/KHBc9Qv3r74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</body>
+</html>
