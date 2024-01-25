@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            margin: 10px;
+            
+            
+        }
+        tbody tr:nth-child(odd){ /* outros valores: even, 2n, 2n-1, 3n, 4n, etc... */
+            background-color: rgb(213, 176, 247);
+
+        }
+        td{
+            border: 1px solid black;
+            padding: 1px;
+            margin: 0px;
+            width: 80px;
+            height:30px;
+            vertical-align: middle;
+            
+        }
+        th {
+            height: 30px;
+            margin: 0px;
+            padding: 2px;
+            border: 1px solid black;
+            text-align: center;
+            vertical-align: bottom;
+        }
+        thead{
+            background-color: rgb(43, 226, 165);
+            position: sticky;
+            top: 0px;
+        }
+        tbody {
+            background-color: rgb(184, 117, 247);
+        }
+        tfoot {
+            background-color: rgb(246, 252, 67) ;
+        }
+
+
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Aqui é uma legenda que fica sempre acima da tabela</caption>
+        <thead scope="col">
+            <th colspan="2" >CABEÇALHO</th><th colspan="2">título</th>
+        </thead>
+        <tbody>
+            <tr>
+            <td rowspan="2" colspan="3
+            ">E</td><td>LE</td> 
+            <tr>
+                <td>OU</td>
+            </tr>
+            <tr>
+                <td>TES</td><td>TE</td><td>TES</td><td>TE</td>
+            </tr>
+            <tr>
+                <td>MAIS</td><td>UMA</td><td>LI</td><td>NHA</td>
+            </tr>
+            <tr>
+                <td>E</td><td>LE</td> <td>MEN</td> <td>TO</td>
+                </tr>
+                <tr>
+                    <td>OU</td><TD>TRA</TD><TD>LI</TD><TD>NHA</TD>
+                </tr>
+                <tr>
+                    <td>TES</td><td>TE</td><td>TES</td><td>TE</td>
+                </tr>
+                <tr>
+                    <td>MAIS</td><td>UMA</td><td>LI</td><td>NHA</td>
+                </tr>
+                <tr>
+                    <td>E</td><td>LE</td> <td>MEN</td> <td>TO</td>
+                    </tr>
+                    <tr>
+                        <td>OU</td><TD>TRA</TD><TD>LI</TD><TD>NHA</TD>
+                    </tr>
+                    <tr>
+                        <td>TES</td><td>TE</td><td>TES</td><td>TE</td>
+                    </tr>
+                    <tr>
+                        <td>MAIS</td><td>UMA</td><td>LI</td><td>NHA</td>
+                    </tr>
+                    <tr>
+                        <td>E</td><td>LE</td> <td>MEN</td> <td>TO</td>
+                        </tr>
+                        <tr>
+                            <td>OU</td><TD>TRA</TD><TD>LI</TD><TD>NHA</TD>
+                        </tr>
+                        <tr>
+                            <td>TES</td><td>TE</td><td>TES</td><td>TE</td>
+                        </tr>
+                        <tr>
+                            <td>MAIS</td><td>UMA</td><td>LI</td><td>NHA</td>
+                        </tr>
+                        <tr>
+                            <td>E</td><td>LE</td> <td>MEN</td> <td>TO</td>
+                            </tr>
+                            <tr>
+                                <td>OU</td><TD>TRA</TD><TD>LI</TD><TD>NHA</TD>
+                            </tr>
+                            <tr>
+                                <td>TES</td><td>TE</td><td>TES</td><td>TE</td>
+                            </tr>
+                            <tr>
+                                <td>MAIS</td><td>UMA</td><td>LI</td><td>NHA</td>
+                            </tr>
+                            <tr>
+                                <td>E</td><td>LE</td> <td>MEN</td> <td>TO</td>
+                                </tr>
+                                <tr>
+                                    <td>OU</td><TD>TRA</TD><TD>LI</TD><TD>NHA</TD>
+                                </tr>
+                                <tr>
+                                    <td>TES</td><td>TE</td><td>TES</td><td>TE</td>
+                                </tr>
+                                <tr>
+                                    <td>MAIS</td><td>UMA</td><td>LI</td><td>NHA</td>
+                                </tr>
+                                <tr>
+                                    <td>E</td><td>LE</td> <td>MEN</td> <td>TO</td>
+                                    </tr>
+                                    <tr>
+                                        <td>OU</td><TD>TRA</TD><TD>LI</TD><TD>NHA</TD>
+                                    </tr>
+                                    <tr>
+                                        <td>TES</td><td>TE</td><td>TES</td><td>TE</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MAIS</td><td>UMA</td><td>LI</td><td>NHA</td>
+                                    </tr>
+                    
+        </tbody>
+        <tfoot scope="row">
+            <tr><th>RODAPÉ</th></tr>
+        </tfoot>
+<!-- 
+    th: título
+    td: dado
+    tr: linha
+-->
+    </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex suscipit, voluptatem hic eveniet officiis quo nisi praesentium accusamus in obcaecati sequi mollitia. Consequatur, illo! Aut perferendis, dolores dolorum dolore ducimus placeat odio velit porro autem amet quidem tempore, eius id sequi suscipit consequuntur, ut eaque quisquam optio ipsum corporis! Temporibus ipsam fugit tempore cum rem. Error corporis ab, atque voluptates a mollitia nesciunt ipsum voluptatem quidem officia magnam aperiam esse? Recusandae sed nam officiis, culpa distinctio reprehenderit accusamus voluptatum dolorem? Nihil illo cum exercitationem amet delectus aliquam quasi harum? Dolore quaerat necessitatibus dolores deserunt. Quae, totam numquam. Quo, beatae nobis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora temporibus, voluptatum rem architecto laudantium quis. Saepe perspiciatis magnam minima natus incidunt quidem laborum porro aspernatur quod. Deleniti quod minus excepturi.
+    Eum nesciunt excepturi aliquid illo! Dignissimos est reiciendis blanditiis voluptatibus laborum aliquid obcaecati vitae vel perferendis, unde nesciunt nam sapiente expedita soluta necessitatibus, laudantium voluptas nulla aperiam delectus? Reprehenderit, itaque.
+    Quae qui laudantium dolorem, molestiae est inventore voluptatum rem, magni nam, quia debitis corrupti sunt esse amet molestias error aperiam facilis explicabo expedita. Aspernatur ea eos corporis totam facere nostrum.
+    Eum, voluptatem officiis recusandae reprehenderit, voluptas ducimus laudantium enim ipsum impedit placeat, dicta sint quisquam aspernatur dolor accusamus illum. Id odit, nam aliquid suscipit debitis commodi provident consequatur ad amet.
+    Minus sint consectetur optio vitae mollitia. Non, omnis asperiores vel fugiat praesentium minima quo officiis tempore animi eligendi, quidem, cumque accusantium sint quisquam. Voluptatum, delectus. Vero error in corporis blanditiis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate animi sit error! Voluptatem, ipsa illo repudiandae maiores eaque, dolorem necessitatibus at deleniti hic culpa laborum ullam? Accusantium doloremque officia nihil! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro natus recusandae ullam optio molestiae laboriosam quos maiores exercitationem illo, suscipit voluptatibus aut expedita odio facilis magnam unde quam et culpa! Cum animi dolore suscipit. Dolor eveniet sequi nam, quod ex possimus. Rem perspiciatis magni dolores facere animi quia delectus fugit minima accusantium porro unde at incidunt debitis dolorem aperiam molestias similique quisquam dicta quam cumque, sed nam. Ipsam, quam vero! Perspiciatis fugiat, asperiores, eligendi nobis ipsa nam blanditiis optio quae tenetur velit quas ea quis quidem perferendis iure magnam nesciunt reprehenderit omnis non voluptate. Sequi culpa molestiae provident eum veritatis ullam error et voluptas voluptatibus temporibus? Molestias officia cum dolore eos adipisci laboriosam, quidem consequuntur esse, totam ex nesciunt, rerum dolorum! Sapiente, minima neque. Provident sed minus dicta maiores placeat ipsam, fugiat optio totam aspernatur earum minima molestiae sunt. Obcaecati aut amet dolore aliquam architecto iste quas quia fugiat deleniti, eveniet et officiis natus dolor doloremque, odio sapiente quaerat quod perspiciatis? Excepturi, sunt cumque suscipit molestias repellendus animi veritatis fugiat aliquam vero! Unde fugit obcaecati aliquid laboriosam facere sed quibusdam assumenda cumque ut reprehenderit accusamus similique aliquam sint nemo magnam quasi ipsam et ea, a voluptate! Quibusdam a quas reprehenderit unde officiis ratione eos qui quis quam voluptate reiciendis nam voluptas consequatur dolorum ipsa commodi, maiores beatae magni, impedit necessitatibus fugiat? Animi eveniet facilis recusandae, dolor totam, dolore ratione quasi temporibus nisi vel culpa nihil voluptatum numquam adipisci iste, nam id harum inventore? Veritatis labore aperiam quae, ipsum, hic non placeat quas consequatur vero quo saepe in rem nemo exercitationem molestiae possimus, enim dicta quisquam voluptates numquam corporis natus earum iste fugiat. Inventore quas voluptatum porro necessitatibus animi provident velit eveniet aspernatur consequuntur rem soluta veniam sed molestias, natus qui minima magni nesciunt alias dolore. At modi praesentium eius dolorem?
+    </p>
+</body>
+</html>
