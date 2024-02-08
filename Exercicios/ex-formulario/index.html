@@ -25,7 +25,7 @@
             text-align: center;
             text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.397);
             font-variant: small-caps;
-            color: #a7a7fd;
+            color: #7373c9;
         }
         p{
             margin: 5px 10px;
@@ -46,6 +46,8 @@
             padding-bottom: 1px;
             background-color: rgba(212, 255, 241, 0);  
             box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 400;
         }
         input::placeholder{
             font-weight: 600;
@@ -62,12 +64,16 @@
             outline: 0px;
             background-color: rgba(212, 255, 241, 0.568);
             box-sizing: border-box;
-            transition: 0.8s;
+            transition: 1s;
             
         }
         input:focus::placeholder{
-            color: rgba(121, 173, 156, 0.568);
-            font-size: 0.9em;
+            color: rgba(62, 85, 77, 0.664);
+         
+        }
+        input:-webkit-autofill{
+            -webkit-box-shadow: 0 0 0 30px #82E7C4 inset;
+            transition: 0ss;
         }
         .botao{
             
@@ -92,13 +98,14 @@
         }
         main{
             margin: auto;
-            margin-top: 15px;
+            margin-top: 7vh;
             background-color: rgba(219, 223, 221, 0.459);
             background-image: linear-gradient(rgba(219, 223, 221, 0.151), rgba(162, 252, 207, 0.856));
             width: 90vw;
             border-radius: 5px;
             box-shadow: 1px 1px 2px rgba(8, 8, 8, 0.404);
             padding: 1px;
+            max-width:600px;
         
         }
         
@@ -110,9 +117,9 @@
         <div>
             <form action="cadastro.php" method="get"> <!-- é possível adicionar o atributo 'autocomplete="off" ' para que não seja sugerido pela caixa do input um texto pronto -->
                <label for="inome">
-                    <input type="text" name="nome" id="inome" placeholder="Nome" required size="20" autocomplete="name"></label> <br>
+                    <input type="text" name="nome" id="inome" placeholder="Nome" required size="20" autocomplete="given-name"></label> <br>
                 <label for="isobrenome">
-                    <input type="text" name="sobrenome" id="isobrenome" placeholder="Sobrenome" required ></label> <br>
+                    <input type="text" name="sobrenome" id="isobrenome" placeholder="Sobrenome" required autocomplete="family-name" ></label> <br>
                 <label for="isenha">
                     <input type="password" name="senha" id="isenha" required minlength="6" maxlength="18" size="20" placeholder="Senha" autocomplete="new-password"></label>
                 
