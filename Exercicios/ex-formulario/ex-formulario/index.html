@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        *{
+          margin: 0px;
+          padding: 0px;  
+        }
+        body{
+            height: 100vh;
+            background-color: rgb(215, 250, 222);
+            background-image: linear-gradient(rgb(0, 255, 170), rgb(48, 128, 128));
+        }
+        form{
+            margin: 40px;
+            text-align: center;
+            
+        }
+        h1{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 10px;
+            text-align: center;
+            text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.397);
+            font-variant: small-caps;
+            color: #a7a7fd;
+        }
+        p{
+            margin: 5px 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(69, 69, 160);
+            font-weight: 600;
+            text-align: left;
+            box-sizing: border-box;
+        }
+        input{
+            box-sizing: border-box;
+            border-radius: 10px;
+            border: 0px;
+            border-bottom: 2px solid rgba(158, 159, 161, 0.774);
+            margin: 5px;
+            line-height: 1.5em;
+            padding: 4px;
+            padding-bottom: 1px;
+            background-color: rgba(212, 255, 241, 0);  
+            box-sizing: border-box;
+        }
+        input::placeholder{
+            font-weight: 600;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        input:hover{
+            box-sizing: border-box;
+            border-bottom: 2px solid rgba(121, 132, 226, 0.774);
+            box-sizing: border-box;
+        }
+        input:focus{
+            box-sizing: border-box;
+            outline: 0px;
+            background-color: rgba(212, 255, 241, 0.568);
+            box-sizing: border-box;
+            transition: 0.8s;
+            
+        }
+        input:focus::placeholder{
+            color: rgba(121, 173, 156, 0.568);
+            font-size: 0.9em;
+        }
+        .botao{
+            
+            margin:auto;
+            
+            border-radius: 10px;
+            text-align: center;
+        }
+        #botao{
+            font-family:Verdana, Geneva, Tahoma, sans-serif; 
+            font-weight: bold;
+            font-size: 0.7em;
+            border: 5px solid rgb(255, 255, 255);
+            background-color: white;
+        }
+        #botao:hover{
+            background-color: rgb(39, 77, 77);
+            border: 5px solid rgb(39, 77, 77);
+            color: white;
+            
+            
+        }
+        main{
+            margin: auto;
+            margin-top: 15px;
+            background-color: rgba(219, 223, 221, 0.459);
+            background-image: linear-gradient(rgba(219, 223, 221, 0.151), rgba(162, 252, 207, 0.856));
+            width: 90vw;
+            border-radius: 5px;
+            box-shadow: 1px 1px 2px rgba(8, 8, 8, 0.404);
+            padding: 1px;
+        
+        }
+        textarea{
+            resize: none;
+            padding: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Página de Cadastro</h1>
+        <div>
+            <form action="cadastro.php" method="get"> <!-- é possível adicionar o atributo 'autocomplete="off" ' para que não seja sugerido pela caixa do input um texto pronto -->
+               <label for="inome">
+                    <input type="text" name="nome" id="inome" placeholder="Nome" required size="20" autocomplete="name"></label> <br>
+                <label for="isobrenome">
+                    <input type="text" name="sobrenome" id="isobrenome" placeholder="Sobrenome" required ></label> <br>
+                <label for="isenha">
+                    <input type="password" name="senha" id="isenha" required minlength="6" maxlength="18" size="20" placeholder="Senha" autocomplete="new-password"></label>
+                
+                <p class="botao"><input type="submit" value="ENVIAR" id="botao" ></p>
+            </form>
+            <form action="POST">
+                <fieldset>
+                 <legend>Caixas de seleção</legend>
+                 <label for="iselecao">Selecione um item:</label>
+                    <select name="selecao" id="iselecao" required>
+                        <option value="" disabled selected>--Clique aqui para selecionar--</option>
+                        <optgroup label="GRUPO A"> 
+                            <option value="ITEM1">Item 1</option>
+                            <option value="ITEM2">Item 2</option>
+                        </optgroup>
+                        <optgroup label="GRUPO B">
+                            <option value="ITEM3">Item 3</option>
+                            <option value="ITEM4">Item 4</option>
+                        </optgroup>
+                    </select> <br>
+                    <input type="submit" value="ENVIAR">
+                </fieldset>
+                    <br>
+                    <fieldset>
+                        <label for="Sugestão">Digite algo:</label>
+                        <input type="text" name="sugest" id="Sugestão" list="lista">
+                        <datalist id="lista">
+                            <option value="SUG1">Sugestão 1</option>
+                            <option value="SUG2">Sugestão 2</option>
+                        </datalist>
+                        <input type="submit">
+                    </fieldset> <br>
+                    <p>Mensagem</p>
+                    <textarea name="" id="" cols="60" rows="4" placeholder="Diga algo..." maxlength="100"></textarea>
+            </form>
+            <form action="post">
+                <fieldset>
+                    <legend>... OUTPUTS ...</legend>
+                    <input placeholder="Digite o 1º valor"  type="number" name="num1" id="inum1" oninput="isoma.innerHTML= Number(inum1.value)+Number(inum2.value)">
+                    <input placeholder="Digite o 2º valor" type="number" name="num2" id="inum2" oninput="isoma.innerHTML=Number(inum1.value)+Number(inum2.value)">
+                    <p style="display: inline-block;">Soma=
+                        <output name="some" id="isoma">-</output>
+                    </p> <br>
+
+                    <label for="irange"><p style="display: inline-block;">Nível:</p></label>
+                    <input style="display: inline-block;" type="range" name="range" id="irange" value="0" oninput="nivel.innerHTML= Number(irange.value)">
+                    <p style="display: inline-block;"><output id="nivel">0</output> </p>
+                    <br>
+                    <input type="number" name="nasc" id="inasc" placeholder="Ano de nascimento" oninput="calc()">
+                    <p>Você completa <output id="idade"> __ </output> anos. </p>
+                </fieldset>
+
+            </form>
+                </main>
+        </div>
+        <script>
+            function calc () {
+                let anoAtual = new Date().getFullYear()
+                idade.innerHTML= Number(anoAtual) - Number(inasc.value);
+        };
+        </script>
+</body>
+</html>
