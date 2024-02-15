@@ -13,11 +13,30 @@
             height: 100vh;
             background-color: rgb(215, 250, 222);
             background-image: linear-gradient(rgb(0, 255, 170), rgb(48, 128, 128));
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }    
+        main{
+            margin: auto;
+            margin-top: 2vh;
+            background-image: linear-gradient(rgba(219, 223, 221, 0.24), rgba(162, 252, 207, 0.397));
+            width: 90vw;
+            border-radius: 5px;
+            box-shadow: 1px 1px 2px rgba(8, 8, 8, 0.404);
+            padding: 1px;
+            max-width:600px;
+        }
+        section{
+            margin: 40px 15px 40px 15px;
+        }
+        div {
+            margin: auto;
+            width: 200px;
         }
         form{
-            margin: 40px;
-            text-align: center;
-            
+            text-align: left; 
+         
         }
         h1{
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -36,6 +55,7 @@
             box-sizing: border-box;
         }
         input{
+            width: 190px;
             box-sizing: border-box;
             border-radius: 10px;
             border: 0px;
@@ -53,6 +73,10 @@
             font-weight: 600;
             margin-bottom: 10px;
             box-sizing: border-box;
+            color: rgba(255, 255, 255, 0.788);
+        }
+        input::-ms-value{
+            color: white;
         }
         input:hover{
             box-sizing: border-box;
@@ -75,6 +99,10 @@
             -webkit-box-shadow: 0 0 0 30px #82E7C4 inset;
             transition: 0ss;
         }
+        input[type=checkbox], [type=radio]{
+            width: 10px;
+            margin: 3px;
+        }
         .botao{
             
             margin:auto;
@@ -82,50 +110,85 @@
             border-radius: 10px;
             text-align: center;
         }
-        #botao{
+        .botoes{
             font-family:Verdana, Geneva, Tahoma, sans-serif; 
             font-weight: bold;
             font-size: 0.7em;
             border: 5px solid rgb(255, 255, 255);
             background-color: white;
         }
-        #botao:hover{
+        .botoes:hover{
             background-color: rgb(39, 77, 77);
             border: 5px solid rgb(39, 77, 77);
             color: white;
             
             
         }
-        main{
-            margin: auto;
-            margin-top: 7vh;
-            background-color: rgba(219, 223, 221, 0.459);
-            background-image: linear-gradient(rgba(219, 223, 221, 0.151), rgba(162, 252, 207, 0.856));
-            width: 90vw;
-            border-radius: 5px;
-            box-shadow: 1px 1px 2px rgba(8, 8, 8, 0.404);
-            padding: 1px;
-            max-width:600px;
-        
+        fieldset{
+            border: 1px solid rgb(66, 165, 119);
+            border-radius: 3px;
+            padding: 10px;
         }
-        
+        legend {
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: 400;
+            color: rgb(47, 121, 86);
+            margin: 0px 3px;
+            padding: 4px;
+        }
     </style>
 </head>
 <body>
     <main>
-        <h1>Página de Cadastro</h1>
-        <div>
-            <form action="cadastro.php" method="get"> <!-- é possível adicionar o atributo 'autocomplete="off" ' para que não seja sugerido pela caixa do input um texto pronto -->
-               <label for="inome">
-                    <input type="text" name="nome" id="inome" placeholder="Nome" required size="20" autocomplete="given-name"></label> <br>
-                <label for="isobrenome">
-                    <input type="text" name="sobrenome" id="isobrenome" placeholder="Sobrenome" required autocomplete="family-name" ></label> <br>
-                <label for="isenha">
-                    <input type="password" name="senha" id="isenha" required minlength="6" maxlength="18" size="20" placeholder="Senha" autocomplete="new-password"></label>
-                
-                <p class="botao"><input type="submit" value="ENVIAR" id="botao" ></p>
-            </form>
-                </main>
-        </div>
+        <h1>Exemplo de Formulário</h1>
+        <section>
+            <div>
+                <form action="cadastro.php" method="post"> <!-- é possível adicionar o atributo 'autocomplete="off" ' para que não seja sugerido pela caixa do input um texto pronto -->
+                   <fieldset>
+                    <legend>Cadastro básico</legend>
+                       <label for="inome">
+                            <input type="text" name="nome" id="inome" placeholder="Nome" required size="20" autocomplete="given-name"></label> <br>
+                        <label for="isobrenome">
+                            <input type="text" name="sobrenome" id="isobrenome" placeholder="Sobrenome" required autocomplete="family-name" ></label> <br>
+                        <label for="isenha">
+                            <input type="password" name="senha" id="isenha" required minlength="6" maxlength="18" size="20" placeholder="Senha" autocomplete="new-password"></label> <br>
+                        <input required type="email" name="email" id="iemail" placeholder="E-mail"><br>
+                        <input required  type="number" name="numero" id="inumero" placeholder="Nota(0 a 10)" min="0" max="10" minlength="25" step="0.1">
+                        <input required type="date" name="" id="" value="2010-01-10">
+                        <input required type="datetime-local" name="" id="">
+                        <input required type="month" name="" id="" >
+                        <input required type="week">
+                        <input required type="url" name="" id="" placeholder="URL">
+                    </fieldset>
+
+                        <fieldset>
+                            <legend>Botões</legend>
+                            <input type="range" name="" id=""> <br>
+                            <p>Seleção</p>
+                            <input type="checkbox" name="item1" id="iitem1"><label for="iitem1">Item</label> <br>
+                            <input type="checkbox" name="item4" id="iitem2"><label for="iitem2">Item</label><br>
+                            <input type="checkbox" name="item2" id="iitem3" checked><label for="iitem3">Item</label><br>
+                            <input type="checkbox" name="item3" id="iitem4"><label for="iitem4">Item</label><br><br>
+                                
+                            <p>Alternativa</p>
+                                <input type="radio" name="sexo" id="masc" checked>Masculino
+                                <input type="radio" name="sexo" id="fem">Feminino
+
+                                <input type="color" name="" id="" value="#7373c9">
+
+
+
+                                <input type="button" value="">
+                                <input type="time" name="" id="">
+
+
+                            <p class="botao"><input type="submit" value="ENVIAR" class="botoes" ></p>
+                            <p class="botao" id="limpar"><input class="botoes"value="LIMPAR" type="reset"></p>
+                        </fieldset>
+                   
+                </form>
+                    </main>
+            </div>
+        </section>
 </body>
 </html>
