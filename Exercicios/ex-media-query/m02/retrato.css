@@ -1,0 +1,9 @@
+body{
+    background-color: #233eff;
+    background-image: url(../imagens/cev-portrait.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    height: 100vh;
+    font-size: 1.5em;
+}

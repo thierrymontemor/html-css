@@ -1,0 +1,36 @@
+*{
+    margin: auto;
+}
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    text-align: center;
+}
+/*PARA RETRATO*/
+
+@media screen and (orientation:portrait) {
+    body{
+        background-color: #233eff;
+        background-image: url(../imagens/cev-portrait.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        height: 100vh;
+        font-size: 1.3em;
+    }
+}
+
+/*PARA PAISAGEM*/ 
+
+@media screen and (orientation:landscape) {
+    body {
+        background-color: #233eff;
+        background-image: url(../imagens/cev-landscape.jpg);
+        background-size: contain;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        height: 100vh;
+        font-size: 2em;
+    }
+}

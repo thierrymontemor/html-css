@@ -1,0 +1,14 @@
+*{
+    font-size: 1em;
+    line-height: 1em;
+    font-family: 'Courier New', Courier, monospace;
+}
+h1 {
+    color: darkblue;
+}
+menu,footer {
+    display: none;
+}
+article::after {
+    content: 'Esta é uma versão impressa do site blabla.com, portanto há uma limitação do conteúdo original';
+}
