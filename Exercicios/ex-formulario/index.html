@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
     <style>
-        *{
+         *{
           margin: 0px;
           padding: 0px;  
         }
@@ -136,15 +136,21 @@
             margin: 0px 3px;
             padding: 4px;
         }
+        textarea{
+            resize: none;
+            padding: 5px;
+            width: 210px;
+
+        }
+        
     </style>
 </head>
 <body>
     <main>
-        <h1>Exemplo de Formulário</h1>
-        <section>
-            <div>
-                <form action="cadastro.php" method="post"> <!-- é possível adicionar o atributo 'autocomplete="off" ' para que não seja sugerido pela caixa do input um texto pronto -->
-                   <fieldset>
+        <h1>Página de Cadastro</h1>
+        <div>
+            <form action="cadastro.php" method="get"> <!-- é possível adicionar o atributo 'autocomplete="off" ' para que não seja sugerido pela caixa do input um texto pronto -->
+                <fieldset>
                     <legend>Cadastro básico</legend>
                        <label for="inome">
                             <input type="text" name="nome" id="inome" placeholder="Nome" required size="20" autocomplete="given-name"></label> <br>
@@ -155,15 +161,12 @@
                         <input required type="email" name="email" id="iemail" placeholder="E-mail"><br>
                         <input required  type="number" name="numero" id="inumero" placeholder="Nota(0 a 10)" min="0" max="10" minlength="25" step="0.1">
                         <input required type="date" name="" id="" value="2010-01-10">
-                        <input required type="datetime-local" name="" id="">
-                        <input required type="month" name="" id="" >
-                        <input required type="week">
-                        <input required type="url" name="" id="" placeholder="URL">
+                        <input type="time" name="" id="">
+                        <p class="botao"><input type="submit" value="ENVIAR" class="botoes" ></p>
+                        <p class="botao" id="limpar"><input class="botoes"value="LIMPAR" type="reset"></p>
                     </fieldset>
-
                         <fieldset>
                             <legend>Botões</legend>
-                            <input type="range" name="" id=""> <br>
                             <p>Seleção</p>
                             <input type="checkbox" name="item1" id="iitem1"><label for="iitem1">Item</label> <br>
                             <input type="checkbox" name="item4" id="iitem2"><label for="iitem2">Item</label><br>
@@ -173,22 +176,68 @@
                             <p>Alternativa</p>
                                 <input type="radio" name="sexo" id="masc" checked>Masculino
                                 <input type="radio" name="sexo" id="fem">Feminino
-
                                 <input type="color" name="" id="" value="#7373c9">
-
-
-
-                                <input type="button" value="">
-                                <input type="time" name="" id="">
-
-
-                            <p class="botao"><input type="submit" value="ENVIAR" class="botoes" ></p>
-                            <p class="botao" id="limpar"><input class="botoes"value="LIMPAR" type="reset"></p>
                         </fieldset>
-                   
-                </form>
-                    </main>
-            </div>
-        </section>
+
+            </form>
+
+            <form action="POST">
+                <fieldset>
+                 <legend>Caixas de seleção</legend>
+                 <label for="iselecao">Selecione um item:</label>
+                    <select name="selecao" id="iselecao" required>
+                        <option value="" disabled selected>--Clique aqui para selecionar--</option>
+                        <optgroup label="GRUPO A"> 
+                            <option value="ITEM1">Item 1</option>
+                            <option value="ITEM2">Item 2</option>
+                        </optgroup>
+                        <optgroup label="GRUPO B">
+                            <option value="ITEM3">Item 3</option>
+                            <option value="ITEM4">Item 4</option>
+                        </optgroup>
+                    </select> <br>
+                    <p class="botao"><input type="submit" value="ENVIAR" class="botoes" ></p>
+                        <p class="botao" id="limpar"><input class="botoes"value="LIMPAR" type="reset"></p>
+                </fieldset>
+                    <br>
+                    <fieldset>
+                        <label for="Sugestão">Digite algo:</label>
+                        <input type="text" name="sugest" id="Sugestão" list="lista">
+                        <datalist id="lista">
+                            <option value="SUG1">Sugestão 1</option>
+                            <option value="SUG2">Sugestão 2</option>
+                        </datalist>
+                        <input type="submit">
+                    </fieldset> <br>
+                    <p style="text-align:left">Mensagem</p>
+                    <textarea name="" id=""  cols="" rows="4" placeholder="Diga algo..." maxlength="100"></textarea>
+            </form>
+            <form action="post">
+                <fieldset>
+                    <legend>... OUTPUTS ...</legend>
+                    <input placeholder="Digite o 1º valor"  type="number" name="num1" id="inum1" oninput="isoma.innerHTML= Number(inum1.value)+Number(inum2.value)">
+                    <input placeholder="Digite o 2º valor" type="number" name="num2" id="inum2" oninput="isoma.innerHTML=Number(inum1.value)+Number(inum2.value)">
+                    <p style="display: inline-block;">Soma=
+                        <output name="some" id="isoma">-</output>
+                    </p> <br>
+
+                    <label for="irange"><p style="display: inline-block;">Nível:</p></label>
+                    <input style="display: inline-block;" type="range" name="range" id="irange" value="0" oninput="nivel.innerHTML= Number(irange.value)">
+                    <p style="display: inline-block;"><output id="nivel">0</output> </p>
+                    <br>
+                    <input type="number" name="nasc" id="inasc" placeholder="Ano de nascimento" oninput="calc()">
+                    <p>Você completa <output id="idade"> __ </output> anos. </p>
+                    
+                </fieldset>
+
+            </form>
+                </main>
+        </div>
+        <script>
+            function calc () {
+                let anoAtual = new Date().getFullYear()
+                idade.innerHTML= Number(anoAtual) - Number(inasc.value);
+        };
+        </script>
 </body>
 </html>
