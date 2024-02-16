@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="estilos/style.css" media="all">
     <link rel="stylesheet" href="estilos/media-query.css">
 </head>
-<body>
+<body onresize="ajustaTela()">
     <header>
-        <i id="icone" class="material-symbols-outlined" onclick="mostraMenu()">
+        <h1 id="nomeDoSite">Thiérry's Site</h1>
+        <i id="icone" class="material-symbols-outlined" onclick="clickMenu()">
             menu
         </i>
         <menu id="lista">
@@ -32,13 +33,20 @@
         <h2></h2>
     </main>
     <script>
-        function mostraMenu() {
+        function clickMenu() {
             if (lista.style.display != 'none'){
                 lista.style.display = 'none';
             } else{
                 lista.style.display = 'block';
             }
         }
+        function ajustaTela(){
+            if (window.innerWidth >= 768){
+            lista.style.display = 'block';
+        } else { 
+            lista.style.display = 'none';
+        }
+    }
     </script>
 </body>
 </html>
