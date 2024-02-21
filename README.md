@@ -1,5 +1,4 @@
 # html-css
- Repositório para o Curso em Vídeo sobre HTML e CSS
-
-Estudando para front-end usando HTML, CSS e JavaScript!
+ Repositório dos exercícios do curso de HTML e CSS do Curso em Vídeo.
+ Até o momento, foram estudados 4 módulos, totalizando 160 horas de curso.
 
